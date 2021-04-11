@@ -1,9 +1,11 @@
 import mongoose from 'mongoose';
 import {OrderSchema} from '../models/OrderModel';
 import {InventorySchema} from '../models/InventoryModel'
+import {MenuItemSchema} from '../models/MenuModel'
 
 const Order = mongoose.model('Orders', OrderSchema);
 const InventoryItem = mongoose.model('InventoryItem', InventorySchema);
+const MenuItem = mongoose.model('MenuItem', MenuItemSchema);
 
 export const addNewOrder = (req,res) => {
   let newOrder = new Order(req.body);
@@ -12,6 +14,27 @@ export const addNewOrder = (req,res) => {
       res.send(err)
     }
     res.json(order)
+  })
+}
+
+export const addNewMenuItem = (req,res) => {
+  console.log('get here');
+  console.log(req.body);
+  let newMenuItem = new MenuItem(req.body);
+  newMenuItem.save((err, item) => {
+    if (err) {
+      res.send(err)
+    }
+    res.json(item)
+  })
+}
+
+export const getMenuItemsForRestaurantName = (req,res) => {
+  MenuItem.find({restaurantName: req.params.restaurantName}, (err, menuItem) => {
+    if (err) {
+      res.send(err)
+    }
+    res.json(menuItem)
   })
 }
 

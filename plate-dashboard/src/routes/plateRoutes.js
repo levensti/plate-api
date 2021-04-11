@@ -1,4 +1,4 @@
-import {addNewInventoryItem, addNewOrder, getOrders, getOrdersForOrderID, getOrdersForRestaurantName, getInventoryItems, getInventoryItemsForRestaurantName, modifyInventoryItem} from '../controllers/plateControllers';
+import {addNewInventoryItem, addNewOrder, getOrders, getOrdersForOrderID, getOrdersForRestaurantName, getInventoryItems, getInventoryItemsForRestaurantName, modifyInventoryItem,addNewMenuItem,getMenuItemsForRestaurantName } from '../controllers/plateControllers';
 import {getCommonOrdersForRestaurantName} from '../analytics/orderAnalytics';
 
 const routes = (app) => {
@@ -30,6 +30,13 @@ const routes = (app) => {
 
     app.route('/analytics/:restaurantName/menu_item_popularity')
       .get(getCommonOrdersForRestaurantName)
+
+    // Create route for creating menu items
+    app.route('/menu_items/')
+      .post(addNewMenuItem)
+    app.route('/menu_items/:restaurantName')
+      .get(getMenuItemsForRestaurantName)
+
   }
   // export it!
   export default routes;
