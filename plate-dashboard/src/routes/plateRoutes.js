@@ -1,5 +1,5 @@
 import {addNewInventoryItem, addNewOrder, getOrders, getOrdersForOrderID, getOrdersForRestaurantName, getInventoryItems, getInventoryItemsForRestaurantName, modifyInventoryItem} from '../controllers/plateControllers';
-
+import {getCommonOrdersForRestaurantName} from '../analytics/orderAnalytics';
 
 const routes = (app) => {
     //create route for orders
@@ -27,6 +27,9 @@ const routes = (app) => {
 
     app.route('/v0/inventory/:restaurantName/:itemName')
       .put(modifyInventoryItem)
+
+    app.route('/analytics/:restaurantName/menu_item_popularity')
+      .get(getCommonOrdersForRestaurantName)
   }
   // export it!
   export default routes;
