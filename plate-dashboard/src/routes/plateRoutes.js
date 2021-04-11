@@ -1,5 +1,6 @@
 import {addNewInventoryItem, addNewOrder, getOrders, getOrdersForOrderID, getOrdersForRestaurantName, getInventoryItems, getInventoryItemsForRestaurantName, modifyInventoryItem,addNewMenuItem,getMenuItemsForRestaurantName } from '../controllers/plateControllers';
 import {getCommonOrdersForRestaurantName} from '../analytics/orderAnalytics';
+import {getMostUsedIngredients} from '../analytics/inventoryAnalytics';
 
 const routes = (app) => {
     //create route for orders
@@ -28,9 +29,11 @@ const routes = (app) => {
     app.route('/v1/inventory/:restaurantName/:itemName')
       .put(modifyInventoryItem)
 
-    app.route('/v0/analytics/:restaurantName/menu_item_popularity')
+    app.route('/v1/analytics/:restaurantName/menu_item_popularity')
       .get(getCommonOrdersForRestaurantName)
 
+    app.route('/v1/analytics/:restaurantName/inventory_item_popularity')
+      .get(getMostUsedIngredients)
     // Create route for creating menu items
     app.route('/v1/menu_items/')
       .post(addNewMenuItem)
