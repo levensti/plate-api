@@ -1,4 +1,4 @@
-# plate-api
+# Plate Financial API
 
 ## Our Product
 
