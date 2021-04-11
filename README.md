@@ -37,3 +37,8 @@ This is especially true during the pandemic; as restaurants need capital to keep
 ## Our Tech Stack
 
 We are using MongoDB as our database, Express.js for our server, React.js for our front-end, and Node.js for our backend—including our API design and our integrations with the Toast and Square POS.
+
+![analytics_menu_items](https://user-images.githubusercontent.com/27901581/114324762-796e4e00-9af1-11eb-8d5a-2cc295bbd260.PNG)
+![inventory](https://user-images.githubusercontent.com/27901581/114324763-7a06e480-9af1-11eb-91c4-36743ae9dd3a.PNG)
+![menu_items](https://user-images.githubusercontent.com/27901581/114324764-7a06e480-9af1-11eb-9f01-1d9c39f136c7.PNG)
+![order_post](https://user-images.githubusercontent.com/27901581/114324765-7a9f7b00-9af1-11eb-950e-d454ee0e3728.PNG)
