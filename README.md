@@ -8,6 +8,25 @@ It also comes with a dashboard to help our customers better visualize their busi
 
 <img width="1370" alt="Screen Shot 2021-04-11 at 5 51 24 PM" src="https://user-images.githubusercontent.com/27901581/114324220-98b7ac00-9aee-11eb-84fd-30cd998bf7a2.png">
 
+## API Endpoints and Functionality
+
+### Orders API (‘/v1/orders/)
+Retrieves your restaurant’s orders by the parameters that you want to search
+When you make an order, we will keep track of your restaurant’s inventory. Meaning you will know exactly what ingredients are being used, and what you need to stock up on. This way, you will never have to worry about being behind or ahead on ingredients!
+
+### Inventory API ( ‘v1/inventory/)
+You can add inventory items. This includes information such as storage type, number of items, size, perishing time, price. This information will allow our Analytics services to let you know how to maximize your restaurant’s potential.
+Inventory item prices are always changing depending on the season, or just store prices in general. Our analytics will ensure that you know exactly how much you are profiting from each menu item, no matter what.
+
+### Analytics API (‘v1/analytics/)
+Our analytics library will tell you exactly what you need to know in order to push your restaurant as far as it can go.
+You will know exactly which menu items are the most successful.
+You will know what ingredients you should be purchasing.
+You will know when you should field more employees.
+
+### Seamless integration into modern restaurant order applications
+Our APIs are designed to be easily integratable into your existing order tracking software, and you can have immediate access to our inventory tracking and analytics tools.
+
 ## The Problem
 
 When we think of the places that bring us unique experiences, restaurants tend to be near the top of that list. But the restaurant business is one that is notoriously low-margin and capital intensive. Instead of wrangling spreadsheets and other forms of data, restaurant owners should be able to focus on creating the best possible experience for their customers—from farm to table—while having the best analytics to show them a true 360 view of their business.
