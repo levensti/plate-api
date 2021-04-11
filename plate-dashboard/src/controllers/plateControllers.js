@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
-import { OrderSchema, InventorySchema } from '../models/plateModel'
+import OrderSchema from '../models/OrderModel';
+import InventorySchema from '../models/InventoryModel'
 
 const Order = mongoose.model('Orders', OrderSchema);
 const InventoryItem = mongoose.model('InventoryItem', InventorySchema);
