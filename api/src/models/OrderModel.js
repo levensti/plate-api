@@ -8,7 +8,7 @@ export const OrderSchema = new Schema({
   },
   orderTotalCost: {
     type: Number,
-    required: "Enter money the order cost"
+    required: "Total order cost"
   },
   menuItems: {
     type: String,
