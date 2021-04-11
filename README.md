@@ -10,6 +10,10 @@ This is especially true during the pandemic; as restaurants need capital to keep
 
 Our product, the Plate Financial API, supports restaurants with the highest quality data that they can get pertaining to their business. The Plate Finance API is really a suite of APIs that return information pertaining to inventory and orders—and gets all of the granular details from the products that have the highest profit margins, predictive analytics around which hours might be tough for businesses if they do not have enough inventory.
 
+It also comes with a dashboard to help our customers better visualize their business data in one consolidated place.
+
+<img width="1370" alt="Screen Shot 2021-04-11 at 5 51 24 PM" src="https://user-images.githubusercontent.com/27901581/114324220-98b7ac00-9aee-11eb-84fd-30cd998bf7a2.png">
+
 ## How we built it
 
 We are using MongoDB as our database, Express.js for our server, React.js for our front-end, and Node.js for our backend—including our API design and our integrations with the Toast and Square POS.
